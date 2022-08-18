@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Page</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="">G-Travels</a></li>
+                <li><a href="../galery.html">Galery</a></li>
+                <li><a href="../merchandising.html">Merchandising</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="BgAdministratorPage">
+        <div class="containerViewAP">
+            <h2>Administrator.</h2>
+
+            <form action="" class="formContainerInputAp" id="formAP">
+
+                <div class="containerInputAP">
+                    <span>Picture:</span>
+                    <input type="file" accept="image/png, .jpeg, .jpg" id="pictureAP">
+                </div>
+                
+                
+                <div class="containerInputAP">
+                    <span>Id product:</span>
+                    <input type="text" id="idProductAP">
+                    <span id="retryIdMessage"></span>
+                </div>
+               
+                <div class="containerInputAP">
+                    <span>Garment type:</span>
+                    <select name="" id="garmentSelectorAP">
+                        <option value="">-</option>
+                        <option value="">T-Shirt</option>
+                        <option value="">Swater</option>
+                    </select>
+                </div>
+
+                <div class="containerInputAP">
+                    <span>Size:</span>
+                    <input type="text" id="sizeAP">
+                </div>
+
+                <div class="containerInputAP">
+                    <span>Price:</span>
+                    <input type="text" id="priceAP">
+                    <span id="isNaNError"></span>
+                </div>
+                <div class="containerSubmitAP">
+                    <input type="submit" value="Submit">
+                    <span id="checkMessage"></span>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+    <script src="../../js/AdministratorPage/administratorProducts.js"></script>
+</body>
+</html>

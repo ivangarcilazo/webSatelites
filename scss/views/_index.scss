@@ -1,0 +1,134 @@
+
+
+.sst{
+    scroll-snap-type: y proximity;
+    height: 100vh;
+    overflow-y:scroll;
+
+
+    .bg__s1__idx{
+        scroll-snap-align: start;
+        background-image: url("../assets/bg_primario/web_first_images_release_0\ \(1\).png");
+        height: 100vh;
+        width: 100%;
+        object-fit: fill;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        animation-name: saturateFilter;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+        filter: saturate(110%);
+        
+    
+        @keyframes saturateFilter {
+            from{filter: saturate(10%);}
+            to{filter: saturate(110%);}
+        }
+    
+    
+        .container__principal__idx{
+            background: rgb(254,242,187);
+            background: radial-gradient(circle, rgba(254,242,187,0) 39%, rgba(0, 0, 0, 0.856) 96%);
+    
+            position: relative;
+            height: 100%;
+            width: 100%;
+    
+            display: flex;
+    
+    
+            .title__principal__idx{
+                align-self: center;
+                color: white;
+                font-size: 7vw;
+                margin-left:2.5vw;
+            }
+            
+            
+        }
+    }
+    
+    .telescopes__idx{
+        scroll-snap-align: start;  
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    
+        .containerTitleSection{
+            position: absolute;
+            left: 72%;
+            bottom: -3%;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 6;
+    
+            .containTitleSVG{
+                position: absolute;
+                z-index: 10;
+                width: 25vw;
+            }
+    
+            h2{
+                margin-left: 4vw;
+                color: white;
+                z-index: 10;
+                font-size: 2.3vw;
+            }
+        }
+        
+        .containerAncorIdx{
+    
+            a{
+                text-decoration: none;
+            }
+    
+            .container__ancla__telescope__s2__idx{
+                    background-image: url("../assets/s2/james_web/james-webb-2745581.png");
+                    filter:grayscale(100%);
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 33vh;
+                    cursor: pointer;
+            
+                    display: flex;
+                    align-items: center;
+                    
+                    transition: all 0.3s;
+    
+                    &:hover{
+                        filter:grayscale(0%);
+                    }
+            
+                    .title__telescopes__idx{
+                        justify-self: end;
+                        background-image: linear-gradient(128deg, rgba(254,242,187,1) 0%, rgba(191,191,228,1) 72%);
+                        filter: grayscale(0%);
+                        margin-left: 2vw;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color:transparent;
+                        font-size: 6vw;
+                    }
+            
+            }
+            .container__ancla__telescope__s2__idx-2{
+                    @extend .container__ancla__telescope__s2__idx;
+                    background-image: url("../assets/s2/hubble/hubble.webp");
+                    background-position: center;
+                    background-size: cover;
+            }
+            .container__ancla__telescope__s2__idx-3{
+                    @extend .container__ancla__telescope__s2__idx;
+                    background-image: url("../assets/s2/terrestre/telescopio-terrestre.png");
+            }
+    
+        }
+        
+    }
+    
+}

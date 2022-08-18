@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'poppins';
+  scroll-behavior: smooth; }
+
+body {
+  height: 100vh; }
+
+.header {
+  width: 100%;
+  height: 5vw;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background: black;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.532651) 31%, rgba(0, 0, 0, 0.78195) 100%); }
+  .header nav {
+    width: 100%; }
+  .header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none; }
+    .header nav ul li a {
+      color: rgba(255, 255, 255, 0.795);
+      text-decoration: none;
+      font-size: 1.45vw;
+      transition: all 0.3s; }
+      .header nav ul li a:hover {
+        color: #6d78da;
+        filter: saturate(110%); }
+
+.sst {
+  scroll-snap-type: y proximity;
+  height: 100vh;
+  overflow-y: scroll; }
+  .sst .bg__s1__idx {
+    scroll-snap-align: start;
+    background-image: url("../assets/bg_primario/web_first_images_release_0 (1).png");
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    animation-name: saturateFilter;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    filter: saturate(110%); }
+
+@keyframes saturateFilter {
+  from {
+    filter: saturate(10%); }
+  to {
+    filter: saturate(110%); } }
+    .sst .bg__s1__idx .container__principal__idx {
+      background: #fef2bb;
+      background: radial-gradient(circle, rgba(254, 242, 187, 0) 39%, rgba(0, 0, 0, 0.856) 96%);
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex; }
+      .sst .bg__s1__idx .container__principal__idx .title__principal__idx {
+        align-self: center;
+        color: white;
+        font-size: 7vw;
+        margin-left: 2.5vw; }
+  .sst .telescopes__idx {
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; }
+    .sst .telescopes__idx .containerTitleSection {
+      position: absolute;
+      left: 72%;
+      bottom: -3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 6; }
+      .sst .telescopes__idx .containerTitleSection .containTitleSVG {
+        position: absolute;
+        z-index: 10;
+        width: 25vw; }
+      .sst .telescopes__idx .containerTitleSection h2 {
+        margin-left: 4vw;
+        color: white;
+        z-index: 10;
+        font-size: 2.3vw; }
+    .sst .telescopes__idx .containerAncorIdx a {
+      text-decoration: none; }
+    .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx, .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2, .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3 {
+      background-image: url("../assets/s2/james_web/james-webb-2745581.png");
+      filter: grayscale(100%);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 33vh;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s; }
+      .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx:hover, .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2:hover, .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3:hover {
+        filter: grayscale(0%); }
+      .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx .title__telescopes__idx, .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2 .title__telescopes__idx, .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3 .title__telescopes__idx {
+        justify-self: end;
+        background-image: linear-gradient(128deg, #fef2bb 0%, #bfbfe4 72%);
+        filter: grayscale(0%);
+        margin-left: 2vw;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 6vw; }
+    .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-2 {
+      background-image: url("../assets/s2/hubble/hubble.webp");
+      background-position: center;
+      background-size: cover; }
+    .sst .telescopes__idx .containerAncorIdx .container__ancla__telescope__s2__idx-3 {
+      background-image: url("../assets/s2/terrestre/telescopio-terrestre.png"); }
+
+.SST {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll; }
+  .SST .sectionGalery {
+    display: flex;
+    align-items: center;
+    transition: all 0.6s;
+    height: 100vh;
+    scroll-snap-align: center; }
+    .SST .sectionGalery .titleGalery {
+      position: absolute;
+      color: white;
+      font-size: 9vw;
+      margin-left: 1vw;
+      transition: all 0.6s;
+      z-index: 10; }
+    .SST .sectionGalery:hover .titleGalery {
+      transform: translate(0vw, -15vw);
+      font-size: 5vw; }
+    .SST .sectionGalery .containerGalery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow-x: hidden; }
+      .SST .sectionGalery .containerGalery .containerImgInfo, .SST .sectionGalery .containerGalery .containerImgInfo-2, .SST .sectionGalery .containerGalery .containerImgInfo-3, .SST .sectionGalery .containerGalery .containerImgInfo-4, .SST .sectionGalery .containerGalery .containerImgInfo-5, .SST .sectionGalery .containerGalery .containerImgInfo-6, .SST .sectionGalery .containerGalery .containerImgInfo-7, .SST .sectionGalery .containerGalery .containerImgInfo-8 {
+        overflow-y: hidden;
+        background-image: url("../assets/pages/galery/Hubble/01-hubble-heic1501a.jpg");
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        filter: grayscale(90%);
+        transition: all  0.3s; }
+        .SST .sectionGalery .containerGalery .containerImgInfo .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-2 .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-3 .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-4 .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-5 .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-6 .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-7 .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-8 .containerInfo {
+          visibility: hidden;
+          align-self: flex-end;
+          background: black;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.689513) 22%, black 97%, black 100%);
+          height: 0vw;
+          padding-top: 2.5vw;
+          padding-left: 2vw;
+          padding-right: 2vw;
+          transition: all 0.3s; }
+          .SST .sectionGalery .containerGalery .containerImgInfo .containerInfo h2, .SST .sectionGalery .containerGalery .containerImgInfo-2 .containerInfo h2, .SST .sectionGalery .containerGalery .containerImgInfo-3 .containerInfo h2, .SST .sectionGalery .containerGalery .containerImgInfo-4 .containerInfo h2, .SST .sectionGalery .containerGalery .containerImgInfo-5 .containerInfo h2, .SST .sectionGalery .containerGalery .containerImgInfo-6 .containerInfo h2, .SST .sectionGalery .containerGalery .containerImgInfo-7 .containerInfo h2, .SST .sectionGalery .containerGalery .containerImgInfo-8 .containerInfo h2 {
+            color: white; }
+          .SST .sectionGalery .containerGalery .containerImgInfo .containerInfo p, .SST .sectionGalery .containerGalery .containerImgInfo-2 .containerInfo p, .SST .sectionGalery .containerGalery .containerImgInfo-3 .containerInfo p, .SST .sectionGalery .containerGalery .containerImgInfo-4 .containerInfo p, .SST .sectionGalery .containerGalery .containerImgInfo-5 .containerInfo p, .SST .sectionGalery .containerGalery .containerImgInfo-6 .containerInfo p, .SST .sectionGalery .containerGalery .containerImgInfo-7 .containerInfo p, .SST .sectionGalery .containerGalery .containerImgInfo-8 .containerInfo p {
+            color: white; }
+        .SST .sectionGalery .containerGalery .containerImgInfo:hover, .SST .sectionGalery .containerGalery .containerImgInfo-2:hover, .SST .sectionGalery .containerGalery .containerImgInfo-3:hover, .SST .sectionGalery .containerGalery .containerImgInfo-4:hover, .SST .sectionGalery .containerGalery .containerImgInfo-5:hover, .SST .sectionGalery .containerGalery .containerImgInfo-6:hover, .SST .sectionGalery .containerGalery .containerImgInfo-7:hover, .SST .sectionGalery .containerGalery .containerImgInfo-8:hover {
+          width: 40vw;
+          z-index: 5;
+          filter: grayscale(0%); }
+        .SST .sectionGalery .containerGalery .containerImgInfo:hover .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-2:hover .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-3:hover .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-4:hover .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-5:hover .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-6:hover .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-7:hover .containerInfo, .SST .sectionGalery .containerGalery .containerImgInfo-8:hover .containerInfo {
+          visibility: visible;
+          height: 11vw; }
+      .SST .sectionGalery .containerGalery .containerImgInfo-2 {
+        background-image: url("../assets/pages/galery/Hubble/04-hubble-heic1307a.jpg"); }
+      .SST .sectionGalery .containerGalery .containerImgInfo-3 {
+        background-image: url("../assets/pages/galery/Hubble/1366_2000.jpg"); }
+      .SST .sectionGalery .containerGalery .containerImgInfo-4 {
+        background-image: url("../assets/pages/galery/Hubble/Nebulosa-NGC-captada-Hubble_1348975254_104689434_1200x675.jpg"); }
+      .SST .sectionGalery .containerGalery .containerImgInfo-5 {
+        background-image: url("../assets/pages/galery/JamesWeb/quinteto-de-stephan_ec9d4487_2000x1917.jpg"); }
+      .SST .sectionGalery .containerGalery .containerImgInfo-6 {
+        background-image: url("../assets/pages/galery/JamesWeb/main_image_deep_field_smacs0723-5mb.jpg"); }
+      .SST .sectionGalery .containerGalery .containerImgInfo-7 {
+        background-image: url("../assets/pages/galery/JamesWeb/MU7OZ7SZ2NG2ZEKY5HAMHSLADY.jpg"); }
+      .SST .sectionGalery .containerGalery .containerImgInfo-8 {
+        background-image: url("../assets/pages/galery/JamesWeb/62450424_401.jpg"); }
+      .SST .sectionGalery .containerGalery img {
+        width: 25vw;
+        height: 100vh;
+        object-fit: cover;
+        transition: all 0.3s;
+        cursor: pointer; }
+        .SST .sectionGalery .containerGalery img:hover {
+          width: 40vw; }
+
+.loginSection {
+  background: #6d78da;
+  background: linear-gradient(52deg, #6d78da 22%, #1d0653 71%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .loginSection .containerForm {
+    width: 36vw;
+    height: 36vw;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vw; }
+    .loginSection .containerForm h3 {
+      font-weight: bold;
+      font-size: 5vw;
+      align-self: flex-start;
+      margin-left: 4vw;
+      color: #5a458d; }
+    .loginSection .containerForm .formLogin {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4vw; }
+      .loginSection .containerForm .formLogin #nameLogin, .loginSection .containerForm .formLogin #passwordLogin {
+        width: 30vw;
+        height: 3vw;
+        border: none;
+        font-size: 1.5vw;
+        padding-left: 1vw; }
+      .loginSection .containerForm .formLogin .containerFooterForm {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1vw; }
+        .loginSection .containerForm .formLogin .containerFooterForm #sendButtonLogin {
+          width: 7vw;
+          height: 2vw;
+          border: none;
+          border-radius: .5rem;
+          background-color: #5b458dd2;
+          backdrop-filter: blur(6px);
+          align-self: flex-end;
+          font-family: 'Courier New', Courier, monospace;
+          cursor: pointer;
+          transition: all 0.3s; }
+          .loginSection .containerForm .formLogin .containerFooterForm #sendButtonLogin:hover {
+            background-color: white;
+            color: black; }
+        .loginSection .containerForm .formLogin .containerFooterForm .messageError {
+          color: red;
+          font-size: 1.2vw; }
+
+.BgAdministratorPage {
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .BgAdministratorPage .containerViewAP {
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 37vw;
+    height: 30vw;
+    border-radius: 1rem;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw; }
+    .BgAdministratorPage .containerViewAP h2 {
+      font-size: 4vw;
+      color: white; }
+    .BgAdministratorPage .containerViewAP .formContainerInputAp {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw; }
+    .BgAdministratorPage .containerViewAP .containerInputAP span {
+      color: white; }
+    .BgAdministratorPage .containerViewAP .containerInputAP .messageRetry {
+      color: red; }
+    .BgAdministratorPage .containerViewAP .containerSubmitAP {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 1vw; }
+      .BgAdministratorPage .containerViewAP .containerSubmitAP input {
+        border: none;
+        border-radius: 4px;
+        padding: .5vw; }
+      .BgAdministratorPage .containerViewAP .containerSubmitAP .animationSent {
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border-radius: 360px;
+        border: 2px dashed #10ff10;
+        visibility: hidden;
+        animation-name: shakeItCheck;
+        animation-duration: .6s;
+        animation-timing-function: ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+
+@keyframes shakeItCheck {
+  0% {
+    transform: rotate(0deg);
+    border: 1px dashed red;
+    visibility: visible; }
+  50% {
+    transform: rotate(360deg);
+    border: 1px dashed red;
+    visibility: visible; }
+  75% {
+    transform: scale(1);
+    visibility: visible; }
+  76% {
+    border: 1px dashed #10ff10;
+    visibility: visible; }
+  90% {
+    border: 1px dashed #10ff10;
+    visibility: visible; }
+  100% {
+    transform: scale(0);
+    visibility: hidden; } }
+        .BgAdministratorPage .containerViewAP .containerSubmitAP .animationSent .checkSimbolSubmit {
+          visibility: hidden;
+          animation-name: checkOk;
+          animation-duration: 1.2s;
+          animation-timing-function: ease-in; }
+
+@keyframes checkOk {
+  0% {
+    visibility: hidden; }
+  49% {
+    visibility: hidden; }
+  50% {
+    visibility: visible; }
+  75% {
+    visibility: hidden; }
+  76% {
+    visibility: visible; }
+  90% {
+    transform: scale(1);
+    visibility: visible; }
+  100% {
+    transform: scale(0);
+    visibility: visible; } }

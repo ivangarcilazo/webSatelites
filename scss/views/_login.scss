@@ -1,0 +1,91 @@
+.loginSection{
+    background: rgb(109,120,218);
+    background: linear-gradient(52deg, rgba(109,120,218,1) 22%, rgba(29,6,83,1) 71%);
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .containerForm{
+        width: 36vw;
+        height: 36vw;
+        background-color: rgba(0, 0, 0, 0.678);
+        border-radius: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+        
+        gap: 3vw;
+
+        h3{
+            font-weight: bold;
+            font-size: 5vw;
+            align-self: flex-start;
+            margin-left: 4vw;
+
+            color: #5a458d;
+        }
+
+        .formLogin{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 4vw;
+
+            #nameLogin{
+                width: 30vw;
+                height: 3vw;
+                border:none;
+
+                font-size: 1.5vw;
+                
+                padding-left: 1vw;
+            }
+            #passwordLogin{
+                @extend #nameLogin ;
+            }
+            .containerFooterForm{
+                display: flex;
+                flex-direction: row-reverse;
+
+                gap: 1vw;
+
+                #sendButtonLogin{
+                    width: 7vw;
+                    height: 2vw;
+                    border: none;
+                    border-radius: .5rem;
+
+                    background-color: #5b458dd2;
+                    backdrop-filter: blur(6px);
+    
+                    align-self: flex-end;
+                     
+                    font-family:'Courier New', Courier, monospace;
+    
+                    cursor: pointer;
+
+                    transition: all 0.3s;
+
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+                .messageError{
+                    color: red;
+                    font-size: 1.2vw;
+                }
+            }
+
+            }
+            
+        
+    }
+}
