@@ -6,6 +6,8 @@ import { evalueData } from "./evalueData.js";
 import {idElement} from "../Data/ToEvalue.js"
 import {UserPrice} from "../Data/ToEvalue.js"
 
+import { toShowData } from "./functionsToAddProducts/toShowData.js";
+
 
 export function sendFormAp(){
 
@@ -22,6 +24,9 @@ export function sendFormAp(){
 
     const sentForm=document.querySelector('#checkMessage')
 
+
+    //Intenté aplicar el operador ternario ? pero por alguna razón me salta error. 
+    
     if(newProducts.some((id)=>id.id==idElement.value)||(isNaN(parseInt(UserPrice.value)))){
         evalueData()
         sentForm.className=""
@@ -30,6 +35,8 @@ export function sendFormAp(){
         newProducts.push(new Products(UserPicture, idElement.value, selectGarment, UserSize, UserPrice.value))
         sentForm.className="animationSent"
         sentForm.innerHTML='<span class="checkSimbolSubmit">✔️</span>'
+        
+        toShowData()
        
     }
    

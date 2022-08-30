@@ -264,7 +264,7 @@ body {
   background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center; }
   .BgAdministratorPage .containerViewAP {
     background-color: rgba(0, 0, 0, 0.685);
@@ -353,6 +353,64 @@ body {
   100% {
     transform: scale(0);
     visibility: visible; } }
+  .BgAdministratorPage .containerProductsView {
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 30%;
+    align-self: flex-end;
+    border-radius: 0.5vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .BgAdministratorPage .containerProductsView h3 {
+      color: white;
+      font-size: 2vw;
+      margin-bottom: 1vw; }
+    .BgAdministratorPage .containerProductsView .containerFilterProductsAP .indicatorContainersAP {
+      margin-left: 1vw;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1.5vw; }
+      .BgAdministratorPage .containerProductsView .containerFilterProductsAP .indicatorContainersAP span {
+        color: white;
+        font-size: 1.5vw; }
+    .BgAdministratorPage .containerProductsView .containerFilterProductsAP #alingDataProductsAP .containerDataProductsAP {
+      margin-top: 1vw;
+      background-color: white;
+      padding: 1vw;
+      border-radius: 1vw;
+      animation-name: resizeDataContainer;
+      animation-iteration-count: 1;
+      animation-duration: 0.6s;
+      animation-timing-function: ease; }
+
+@keyframes resizeDataContainer {
+  from {
+    visibility: hidden;
+    height: 0vw;
+    width: 0vw; }
+  to {
+    visibility: visible;
+    height: 5.8vw;
+    width: 20vw;
+    opacity: 1; } }
+      .BgAdministratorPage .containerProductsView .containerFilterProductsAP #alingDataProductsAP .containerDataProductsAP .dataProductsAP {
+        position: relative;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.5vw; }
+        .BgAdministratorPage .containerProductsView .containerFilterProductsAP #alingDataProductsAP .containerDataProductsAP .dataProductsAP span {
+          color: black;
+          font-size: 1.5vw; }
+      .BgAdministratorPage .containerProductsView .containerFilterProductsAP #alingDataProductsAP .containerDataProductsAP .containerDeleteIconAP {
+        display: flex;
+        justify-content: end; }
+        .BgAdministratorPage .containerProductsView .containerFilterProductsAP #alingDataProductsAP .containerDataProductsAP .containerDeleteIconAP .imgDeleteIconAP {
+          width: 1.5vw;
+          cursor: pointer; }
 
 .bgMain {
   background-image: url("../assets/pages/merchandising/bgMain/HuGGeENt6kGyixe3hT9tnY.jpg");
@@ -524,3 +582,120 @@ body {
             cursor: pointer; }
   .bgMain .blurContainerProducts {
     filter: blur(6px); }
+
+.sectionForm {
+  height: 100vh;
+  background-image: url("../assets/pages/login/4k-star-wallpapers-los-mejores-fondos-4k-star-gratis-wallpaperaccess.-imagen-4k-ultra-hd-de-estrellas-1024x576.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(50%); }
+  .sectionForm .containerformLogin, .sectionForm .containerformLoginBlack {
+    height: 28vw;
+    width: 40vw;
+    background-color: rgba(255, 255, 255, 0.459);
+    backdrop-filter: blur(4px);
+    display: flex;
+    gap: 2.5vw;
+    padding: 2vw;
+    flex-direction: column;
+    border-radius: 1vw; }
+    .sectionForm .containerformLogin h3, .sectionForm .containerformLoginBlack h3 {
+      font-size: 5vw; }
+    .sectionForm .containerformLogin form, .sectionForm .containerformLoginBlack form {
+      display: flex;
+      flex-direction: column;
+      gap: 3vw; }
+      .sectionForm .containerformLogin form .inputLogin, .sectionForm .containerformLoginBlack form .inputLogin {
+        background-color: black;
+        border-radius: .4vw;
+        border: none;
+        height: 2.8vw;
+        padding-left: 1vw;
+        color: white;
+        transition: all 0.5s; }
+        .sectionForm .containerformLogin form .inputLogin::placeholder, .sectionForm .containerformLoginBlack form .inputLogin::placeholder {
+          color: rgba(255, 255, 255, 0.445); }
+        .sectionForm .containerformLogin form .inputLogin:focus, .sectionForm .containerformLoginBlack form .inputLogin:focus {
+          background-color: white;
+          color: black; }
+  .sectionForm .containerformLoginBlack {
+    background-color: rgba(0, 0, 0, 0.644);
+    animation-name: toBlack;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s; }
+
+@keyframes toBlack {
+  from {
+    background-color: rgba(255, 255, 255, 0.459); }
+  to {
+    background-color: rgba(0, 0, 0, 0.644); } }
+    .sectionForm .containerformLoginBlack h3 {
+      color: white;
+      animation-name: toWhite;
+      animation-timing-function: ease-in;
+      animation-iteration-count: 1;
+      animation-duration: 0.5s; }
+
+@keyframes toWhite {
+  from {
+    color: black; }
+  to {
+    color: white; } }
+
+.bgRegister {
+  background-image: url("../assets/pages/register/22-225256_476268-title-sci-fi-stars-wallpaper-high-resolution.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.formRegisterBg {
+  height: 100vh;
+  background: black;
+  background: linear-gradient(52deg, rgba(0, 0, 0, 0.73153) 22%, rgba(29, 6, 83, 0.658701) 71%); }
+  .formRegisterBg .containerDataRegister {
+    padding-top: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .formRegisterBg .containerDataRegister h3 {
+      color: white;
+      font-size: 8vw;
+      margin-left: 2vw; }
+    .formRegisterBg .containerDataRegister span {
+      color: white; }
+    .formRegisterBg .containerDataRegister .formRegister {
+      margin-top: 8vw;
+      width: 80vw;
+      display: flex;
+      flex-direction: column; }
+      .formRegisterBg .containerDataRegister .formRegister .containerInputRegister {
+        width: 50%;
+        padding: 1vw; }
+        .formRegisterBg .containerDataRegister .formRegister .containerInputRegister input {
+          width: 100%;
+          border: solid;
+          padding-left: 1vw;
+          font-size: 1.8vw;
+          height: 3vw;
+          border: solid;
+          animation-name: borderAnimation;
+          animation-duration: 1s;
+          animation-timing-function: ease-in;
+          animation-iteration-count: infinite; }
+
+@keyframes borderAnimation {
+  from {
+    border: solid black  0.5px; }
+  to {
+    border: dashed white  0.5px; } }
+        .formRegisterBg .containerDataRegister .formRegister .containerInputRegister label {
+          position: absolute;
+          transform: translate(1vw, 0vw);
+          font-size: 1.8vw; }
+      .formRegisterBg .containerDataRegister .formRegister .inputRegister {
+        height: 3vw; }

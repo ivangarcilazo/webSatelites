@@ -1,91 +1,89 @@
-.loginSection{
-    background: rgb(109,120,218);
-    background: linear-gradient(52deg, rgba(109,120,218,1) 22%, rgba(29,6,83,1) 71%);
+.sectionForm{
     height: 100vh;
-    
+    background-image:url("../assets/pages/login/4k-star-wallpapers-los-mejores-fondos-4k-star-gratis-wallpaperaccess.-imagen-4k-ultra-hd-de-estrellas-1024x576.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    .containerForm{
-        width: 36vw;
-        height: 36vw;
-        background-color: rgba(0, 0, 0, 0.678);
-        border-radius: 1rem;
+
+    filter: grayscale(50%);
+
+    .containerformLogin{
+        height: 28vw;
+        width: 40vw;
+        background-color: rgba(255, 255, 255, 0.459);
+        backdrop-filter: blur(4px);
 
         display: flex;
-        justify-content: center;
-        align-items: center;
-
+        gap:2.5vw;
+        padding: 2vw;
         flex-direction: column;
-        
-        gap: 3vw;
+
+        border-radius: 1vw;
 
         h3{
-            font-weight: bold;
             font-size: 5vw;
-            align-self: flex-start;
-            margin-left: 4vw;
-
-            color: #5a458d;
         }
-
-        .formLogin{
+        form{
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            gap: 3vw;
 
-            gap: 4vw;
-
-            #nameLogin{
-                width: 30vw;
-                height: 3vw;
-                border:none;
-
-                font-size: 1.5vw;
-                
+            .inputLogin{
+                background-color: black;
+                border-radius: .4vw;
+                border: none;
+                height: 2.8vw;
                 padding-left: 1vw;
-            }
-            #passwordLogin{
-                @extend #nameLogin ;
-            }
-            .containerFooterForm{
-                display: flex;
-                flex-direction: row-reverse;
+                color: white;
+                transition: all 0.5s;
 
-                gap: 1vw;
-
-                #sendButtonLogin{
-                    width: 7vw;
-                    height: 2vw;
-                    border: none;
-                    border-radius: .5rem;
-
-                    background-color: #5b458dd2;
-                    backdrop-filter: blur(6px);
-    
-                    align-self: flex-end;
-                     
-                    font-family:'Courier New', Courier, monospace;
-    
-                    cursor: pointer;
-
-                    transition: all 0.3s;
-
-                    &:hover{
-                        background-color: white;
-                        color: black;
-                    }
+                &::placeholder{
+                    color: rgba(255, 255, 255, 0.445);
                 }
-                .messageError{
-                    color: red;
-                    font-size: 1.2vw;
+                &:focus{
+                    background-color: white;
+                    color: black
                 }
+                
             }
+        }
 
+    }
+
+    //Para el cambio a negro
+    .containerformLoginBlack{
+        @extend .containerformLogin;
+        background-color: rgba(0, 0, 0, 0.644);
+
+        animation-name: toBlack;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+
+        @keyframes  toBlack {
+            from{
+                background-color: rgba(255, 255, 255, 0.459);
+            }to{
+                background-color: rgba(0, 0, 0, 0.644);
             }
+        }
+        h3{
+            color: white;
+            animation-name: toWhite;
+            animation-timing-function: ease-in;
+            animation-iteration-count: 1;
+            animation-duration: 0.5s;
             
-        
+            @keyframes  toWhite {
+                from{
+                    color: black;
+                }to{
+                    color: white;
+                }
+            }
+        }
     }
 }
